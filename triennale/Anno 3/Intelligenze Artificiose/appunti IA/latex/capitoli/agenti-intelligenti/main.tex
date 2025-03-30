@@ -148,11 +148,11 @@ Esistono diversi tipi di programmi agente, tra cui:
 
 \selectlanguage{italian}
 
-\subsection{Agenti \foreignlanguage{english}{simple reflex}}
+\subsection{Agenti \foreignlanguage{english}{Simple Reflex}}
 
-Il più semplice tipo di agente è il \foreignlanguage{english}{\textbf{simple reflex}}. Questi agenti 
+Il più semplice tipo di agente è il \foreignlanguage{english}{\textbf{Simple reflex}}. Questi agenti 
 selezionano le azioni da eseguire in base alla percezione corrente, ignorando
- la sequenza.
+la sequenza.
 
 Es: aspirapolvere in una stanza costituita da due mattonelle A e B
 
@@ -163,9 +163,11 @@ Es: aspirapolvere in una stanza costituita da due mattonelle A e B
 		else if location = B then return Left
 \end{lstlisting}
 
-Il programma è scritto sotto forma di regole condizione-azione del tipo: \foreignlanguage{english}{if condition then action}
+Il programma è scritto sotto forma di regole condizione azione del tipo: \foreignlanguage{english}{If Then}
 
-L'agente funziona tramite delle regole condizione-azione che gli permettono di effettuare la connessione tra la 
+\selectlanguage{italian}
+
+L'agente funziona tramite delle regole condizione azione che gli permettono di effettuare la connessione tra la 
 percezione e l'azione.
 
 Questo tipo di agenti funziona bene solo le l'azione giusta può essere scelta
@@ -187,7 +189,7 @@ totalmente osservabile si hanno dei fallimenti.
 		return action
 \end{lstlisting}
 
-\subsection{Model-based reflex agent}
+\subsection{\foreignlanguage{english}{Model based reflex agent}}
 
 La maniera più efficiente che l'agente ha per gestire la parziale osservabilità dell'ambiente è quella di tenere traccia della porzione di mondo che non può vedere in questo istante.
 
@@ -204,7 +206,7 @@ Per aggiornare lo stato interno dell'agente al passare del tempo abbiamo bisogno
 	\item informazione su come lo stato dell'ambiente si riflette sulle percezioni dell'agente → modello del sensore
 \end{itemize}
 
-Modello di transizione e modello del sensore permettono all'agente di tenere traccia dello stato del mondo. Un agente che usa questi modelli è detto model-based agent.
+Modello di transizione e modello del sensore permettono all'agente di tenere traccia dello stato del mondo. Un agente che usa questi modelli è detto \foreignlanguage{english}{Model based agent}.
 
 \begin{figure}[H]
 	\centering
@@ -226,7 +228,7 @@ La funzione UPDATE-STATE è responsabile della creazione del nuovo stato interno
 
 Raramente un agente riesce a determinare lo stato corrente di un mondo parzialmente osservabile, può lavorare solo sulla migliore approssimazione.
 
-\subsection{Goal-based agent}
+\subsection{\foreignlanguage{english}{Goal based agent}}
 
 Insieme alla descrizione dello stato corrente, l'agente ha bisogno di qualche tipo d'informazione sul suo obiettivo che descriva la situazione desiderabile.
 
@@ -237,7 +239,7 @@ Questo tipo di agente è più flessibile perché la conoscenza che supporta le s
 	\includegraphics[width=0.8\textwidth]{capitoli/agenti-intelligenti/imgs/goal-based.png}
 \end{figure}
 
-\subsection{Utility-based agents}
+\subsection{\foreignlanguage{english}{Utility based agents}}
 
 Gli obiettivi da soli non sono sufficienti a generare un comportamento di alta qualità nella maggior parte degli ambienti.
 
@@ -257,7 +259,7 @@ Un agente di questo tipo sceglie l'azione che massimizza l'utilità attesa delle
 	\includegraphics[width=0.8\textwidth]{capitoli/agenti-intelligenti/imgs/model-based.png}
 \end{figure}
 
-\subsection{Learning agents}
+\subsection{\foreignlanguage{english}{Learning agents}}
 
 L'apprendimento permette all'agente di operare in un ambiente inizialmente sconosciuto e di diventare più competente di quanto la sua conoscenza iniziale gli permetta.
 
@@ -270,7 +272,7 @@ Un agente che apprende può essere suddiviso in quattro componenti concettuali:
 
 \begin{itemize}
 	\item Elemento di apprendimento: responsabile degli avanzamenti fatti, ottiene feedback dalla critica su come l'agente si sta comportando e determina come l'elemento di performance deve essere modificato per fare meglio in futuro
-	\item elemento di performance: quello che nei precedenti modelli era l'intero agente, prende in input le percezioni e restituisce le azioni
+	\item elemento di performance: quello che nei precedenti modelli era l'intero agente, prende in ingresso le percezioni e restituisce le azioni
 	\item critica: fornisce feedback sul successo delle azioni dell'agente
 	\item generatore di problemi: suggerisce azioni che poteranno a nuove esperienze, suggerisce azioni di esplorazione. Potrebbe identificare parti del modello che hanno bisogno di miglioramenti e suggerire esperimenti.
 \end{itemize}

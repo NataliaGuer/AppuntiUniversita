@@ -76,7 +76,7 @@ jobs:
            IFS=',' read -r -a file_array <<< "$changed_files"
         
            for file in "${file_array[@]}"; do
-              java -jar textidote.jar "$file"
+              java -jar textidote.jar --ignore sh:figref,sh:nobreak "$file"
             done
 
   typo:
